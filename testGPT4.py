@@ -2,12 +2,12 @@ import openai
 import json
 import sys
 
-# this to encode non-english responses for correct display of characters
+# Encode non-english responses for correct display of characters e.g. Arabic, Urdu etc
 sys.stdout.reconfigure(encoding='utf-8')
 # keep the api key secret.  Do not disclose to anyone. Better not to hardcode but i am lazy
 openai.api_key = "<Your Own API key.  Get it from your Open AI account>"
 
-# first message shall always be in the "role" of "system". Here you tell guiding principals to the model
+# first message shall always be in the "role" of "system". Here you provide guiding principals to the model
 gpt_messages = [
     {"role": "system", "content":
      """You are virtual assistant.  You will only provide answers if those can not be used to harm or damage
